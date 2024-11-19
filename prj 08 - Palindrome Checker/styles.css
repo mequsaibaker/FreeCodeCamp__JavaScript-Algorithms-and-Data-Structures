@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+::after,
+::before {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+    font-size: var(--fs-0);
+    color: white;
+}
+
+:root {
+    /* @link https://utopia.fyi/type/calculator?c=320,16,1.5,1920,20,1.618,5,2,1280&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+    /* Step -2: 7.1111px → 7.6396px */
+    --fs--2: clamp(0.4444rem, 0.4378rem + 0.033vw, 0.4775rem);
+    /* Step -1: 10.6667px → 12.3609px */
+    --fs--1: clamp(0.6667rem, 0.6455rem + 0.1059vw, 0.7726rem);
+    /* Step 0: 16px → 20px */
+    --fs-0: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+    /* Step 1: 24px → 32.36px */
+    --fs-1: clamp(1.5rem, 1.3955rem + 0.5225vw, 2.0225rem);
+    /* Step 2: 36px → 52.3585px */
+    --fs-2: clamp(2.25rem, 2.0455rem + 1.0224vw, 3.2724rem);
+    /* Step 3: 54px → 84.716px */
+    --fs-3: clamp(3.375rem, 2.991rem + 1.9198vw, 5.2948rem);
+    /* Step 4: 81px → 137.0705px */
+    --fs-4: clamp(5.0625rem, 4.3616rem + 3.5044vw, 8.5669rem);
+    /* Step 5: 121.5px → 221.7801px */
+    --fs-5: clamp(7.5938rem, 6.3402rem + 6.2675vw, 13.8613rem);
+
+    /* @link https://utopia.fyi/type/calculator?c=320,8,1.2,1920,10,1.25,10,2,1280&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+    /* Step -2: 5.5556px → 6.4px */
+    --spacing--2: clamp(0.3472rem, 0.3367rem + 0.0528vw, 0.4rem);
+    /* Step -1: 6.6667px → 8px */
+    --spacing--1: clamp(0.4167rem, 0.4rem + 0.0833vw, 0.5rem);
+    /* Step 0: 8px → 10px */
+    --spacing-0: clamp(0.5rem, 0.475rem + 0.125vw, 0.625rem);
+    /* Step 1: 9.6px → 12.5px */
+    --spacing-1: clamp(0.6rem, 0.5638rem + 0.1813vw, 0.7813rem);
+    /* Step 2: 11.52px → 15.625px */
+    --spacing-2: clamp(0.72rem, 0.6687rem + 0.2566vw, 0.9766rem);
+    /* Step 3: 13.824px → 19.5313px */
+    --spacing-3: clamp(0.864rem, 0.7927rem + 0.3567vw, 1.2207rem);
+    /* Step 4: 16.5888px → 24.4141px */
+    --spacing-4: clamp(1.0368rem, 0.939rem + 0.4891vw, 1.5259rem);
+    /* Step 5: 19.9066px → 30.5176px */
+    --spacing-5: clamp(1.2442rem, 1.1115rem + 0.6632vw, 1.9073rem);
+    /* Step 6: 23.8879px → 38.147px */
+    --spacing-6: clamp(1.493rem, 1.3148rem + 0.8912vw, 2.3842rem);
+    /* Step 7: 28.6654px → 47.6837px */
+    --spacing-7: clamp(1.7916rem, 1.5539rem + 1.1886vw, 2.9802rem);
+    /* Step 8: 34.3985px → 59.6046px */
+    --spacing-8: clamp(2.1499rem, 1.8348rem + 1.5754vw, 3.7253rem);
+    /* Step 9: 41.2782px → 74.5058px */
+    --spacing-9: clamp(2.5799rem, 2.1645rem + 2.0767vw, 4.6566rem);
+    /* Step 10: 49.5339px → 93.1323px */
+    --spacing-10: clamp(3.0959rem, 2.5509rem + 2.7249vw, 5.8208rem);
+
+    --color-dark-blue: #0a0a23;
+    --color-blue: #002da9;
+    --color-green: #00471b;
+    --color-purple: #5a01a7;
+
+    --radius-1: 16px;
+}
+
+h1 {
+    font-size: var(--fs-2);
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: var(--spacing-6);
+}
+
+p {
+    font-size: var(--fs-0);
+    font-weight: 200;
+    line-height: 1.5;
+    margin-bottom: var(--spacing-4);
+}
+
+label {
+    font-size: var(--fs--1);
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-4);
+}
+
+em {
+    font-weight: 500;
+}
+
+
+/* General */
+
+body {
+    background-color: var(--color-dark-blue);
+    padding: var(--spacing-10);
+}
+
+
+.uni-container {
+    max-width: clamp(18.75rem, 13.75rem + 25vw, 43.75rem);
+    min-height: calc(100vh - var(--spacing-10)*2);
+    text-align: center;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+/* Header */
+header img {
+    height: var(--spacing-4);
+    margin-bottom: var(--spacing-2)
+}
+
+
+/* Main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+}
+
+form {
+    color: black;
+    background-color: white;
+    padding: var(--spacing-6);
+    border-radius: var(--radius-1);
+    box-shadow: 0px 15px 100px var(--color-blue);
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+    display: flex;
+    gap: var(--spacing-2);
+    margin-bottom: var(--spacing-4);
+}
+
+.input-container input {
+    color: var(--color-purple);
+    font-size: var(--fs-0);
+    width: 100%;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid #0a0a2355;
+    border-radius: var(--radius-1);
+    padding: var(--spacing-0) var(--spacing-2);
+    margin-top: calc(-1 * var(--spacing-4));
+}
+
+.input-container input:focus {
+    outline: none;
+    border-color: var(--color-purple);
+    background-image: radial-gradient(at 50% 100%, #5a01a71F 10%, #0000 70%);
+}
+
+.input-container button {
+    background-color: var(--color-purple);
+    color: white;
+    border: none;
+    padding: var(--spacing-0) var(--spacing-4);
+    border-radius: var(--radius-1);
+    cursor: pointer;
+}
+
+.note {
+    text-align: left;
+    background-color: var(--color-green);
+    border-radius: var(--radius-1);
+    padding: var(--spacing-6);
+}
+
+.note p {
+    margin-left: var(--spacing-6);
+    margin-bottom: 0;
+}
+
+.note p::first-letter {
+    margin-left: calc(-1 * var(--spacing-6));
+}
+
+#result {
+    display: none;
+}
+
+.result p {
+    margin-bottom: 0;
+}
+
+.result em {
+    font-weight: 700;
+    color: var(--color-purple);
+}
+
+.result span {
+    font-weight: 400;
+}
