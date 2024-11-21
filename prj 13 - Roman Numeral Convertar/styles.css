@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+::after,
+::before {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    color: var(--color-text-01);
+    border-radius: var(--radius-01);
+}
+
+html {
+    font-size: var(--fs-0);
+}
+
+body {
+    background-color: var(--color-bg-01);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+:root {
+    /* @link https://utopia.fyi/type/calculator?c=320,16,1.5,1920,20,1.618,5,2,1280&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+    /* Step -2: 7.1111px → 7.6396px */
+    --fs--2: clamp(0.4444rem, 0.4378rem + 0.033vw, 0.4775rem);
+    /* Step -1: 10.6667px → 12.3609px */
+    --fs--1: clamp(0.6667rem, 0.6455rem + 0.1059vw, 0.7726rem);
+    /* Step 0: 16px → 20px */
+    --fs-0: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+    /* Step 1: 24px → 32.36px */
+    --fs-1: clamp(1.5rem, 1.3955rem + 0.5225vw, 2.0225rem);
+    /* Step 2: 36px → 52.3585px */
+    --fs-2: clamp(2.25rem, 2.0455rem + 1.0224vw, 3.2724rem);
+    /* Step 3: 54px → 84.716px */
+    --fs-3: clamp(3.375rem, 2.991rem + 1.9198vw, 5.2948rem);
+    /* Step 4: 81px → 137.0705px */
+    --fs-4: clamp(5.0625rem, 4.3616rem + 3.5044vw, 8.5669rem);
+    /* Step 5: 121.5px → 221.7801px */
+    --fs-5: clamp(7.5938rem, 6.3402rem + 6.2675vw, 13.8613rem);
+
+
+    /* @link https://utopia.fyi/type/calculator?c=320,8,1.2,1920,12,1.25,8,2,1280&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+    /* Step -2: 5.5556px → 7.68px */
+    --spacing--2: clamp(0.3472rem, 0.3207rem + 0.1328vw, 0.48rem);
+    /* Step -1: 6.6667px → 9.6px */
+    --spacing--1: clamp(0.4167rem, 0.38rem + 0.1833vw, 0.6rem);
+    /* Step 0: 8px → 12px */
+    --spacing-0: clamp(0.5rem, 0.45rem + 0.25vw, 0.75rem);
+    /* Step 1: 9.6px → 15px */
+    --spacing-1: clamp(0.6rem, 0.5325rem + 0.3375vw, 0.9375rem);
+    /* Step 2: 11.52px → 18.75px */
+    --spacing-2: clamp(0.72rem, 0.6296rem + 0.4519vw, 1.1719rem);
+    /* Step 3: 13.824px → 23.4375px */
+    --spacing-3: clamp(0.864rem, 0.7438rem + 0.6008vw, 1.4648rem);
+    /* Step 4: 16.5888px → 29.2969px */
+    --spacing-4: clamp(1.0368rem, 0.8779rem + 0.7943vw, 1.8311rem);
+    /* Step 5: 19.9066px → 36.6211px */
+    --spacing-5: clamp(1.2442rem, 1.0352rem + 1.0447vw, 2.2888rem);
+    /* Step 6: 23.8879px → 45.7764px */
+    --spacing-6: clamp(1.493rem, 1.2194rem + 1.368vw, 2.861rem);
+    /* Step 7: 28.6654px → 57.2205px */
+    --spacing-7: clamp(1.7916rem, 1.4347rem + 1.7847vw, 3.5763rem);
+    /* Step 8: 34.3985px → 71.5256px */
+    --spacing-8: clamp(2.1499rem, 1.6858rem + 2.3204vw, 4.4703rem);
+
+    --radius-01: 4px;
+
+
+    color-scheme: dark light;
+
+    --color-primary-dark: #1b1b32;
+    --color-secodary-dark: #3b3b4f;
+    --color-primary-light: #FAF9E6;
+    --color-secodary-light: #ECD9BA;
+    --color-teritery-dark: #febe41;
+    --color-teritery-light: #C87941;
+    --color-neutral-white: #FEFCFF;
+    --color-neutral-black: #212121;
+
+    --color-error: #FF003F;
+
+    --light-bg-01: var(--color-primary-light);
+    --light-bg-02: var(--color-secodary-light);
+    --light-bg-03: var(--color-teritery-light);
+    --light-text-01: var(--color-neutral-black);
+    --dark-bg-01: var(--color-primary-dark);
+    --dark-bg-02: var(--color-secodary-dark);
+    --dark-bg-03: var(--color-teritery-dark);
+    --dark-text-01: var(--color-neutral-white);
+
+    --color-bg-01: light-dark(var(--light-bg-01), var(--dark-bg-01));
+    --color-bg-02: light-dark(var(--light-bg-02), var(--dark-bg-02));
+    --color-bg-03: light-dark(var(--light-bg-03), var(--dark-bg-03));
+    --color-text-01: light-dark(var(--light-text-01), var(--dark-text-01));
+    --color-text-01-inverted: light-dark(var(--dark-text-01), var(--light-text-01));
+    --color-placeholder-01: light-dark(#C8794155, #febe4155);
+}
+
+:root:has(#theme [value="light"]:checked) {
+    color-scheme: light;
+}
+
+:root:has(#theme [value="dark"]:checked) {
+    color-scheme: dark;
+}
+
+:root:has(#theme [value="light"]:checked) img {
+    filter: invert();
+}
+
+h1 {
+    font-family: "Cinzel", serif;
+    font-size: var(--fs-2);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: var(--spacing-6);
+}
+
+.caption {
+    font-size: var(--fs--1);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+select {
+    font-size: var(--fs--1);
+    font-weight: 400;
+}
+
+label {
+    font-size: var(--fs-0);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+input {
+    font-size: var(--fs-1);
+    font-weight: 600;
+}
+
+button {
+    font-size: var(--fs-0);
+    font-weight: 500;
+}
+
+#output {
+    font-size: var(--fs-0);
+    font-weight: 400;
+}
+
+/* General */
+
+.global-container {
+    width: clamp(18.75rem, 15rem + 18.75vw, 37.5rem);
+    margin: auto;
+    text-align: center;
+    padding: var(--spacing-8) var(--spacing-0);
+}
+
+/* header */
+
+header img {
+    height: var(--spacing-4);
+    margin-bottom: var(--spacing-2);
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-1);
+    margin-bottom: var(--spacing-2);
+}
+
+header select {
+    outline: none;
+    padding: calc(var(--spacing--2) / 2) var(--spacing-2);
+    border: 1px solid var(--color-bg-03);
+}
+
+/* main */
+
+fieldset,
+#output {
+    border: 1px solid var(--color-bg-03);
+    background-color: var(--color-bg-02);
+}
+
+fieldset {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-6);
+    gap: var(--spacing-2);
+
+    box-shadow: 0 10px 1000px -20px var(--color-bg-03);
+}
+
+input {
+    width: 100%;
+    text-align: center;
+    padding: calc(var(--spacing--2) / 2) var(--spacing-4);
+}
+
+input::placeholder {
+    color: var(--color-placeholder-01);
+    font-weight: 300;
+    transform: scale(0.75);
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+    padding: var(--spacing-2) var(--spacing-6);
+    color: var(--color-text-01-inverted);
+    background-color: var(--color-bg-03);
+}
+
+#output {
+    display: block;
+    padding: var(--spacing-2) var(--spacing-6);
+    margin: var(--spacing-2) 0;
+}
+
+.error {
+    border: 3px solid var(--color-error) !important;
+    color: var(--color-error) !important;
+}
+
+.success {
+    font-size: var(--fs-2) !important;
+    font-weight: 600 !important;
+    font-family: "Cinzel", serif !important;
+    color: var(--color-bg-03) !important;
+}
+
+.hidden {
+    display: none !important;
+}

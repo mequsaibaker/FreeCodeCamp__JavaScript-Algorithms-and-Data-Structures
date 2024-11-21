@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roman Numeral Converter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="global-container">
+      <header>
+        <img
+          src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg"
+          alt="logo"
+        />
+        <h1>Roman Numeral Converter</h1>
+        <div>
+          <label class="caption" for="theme">choose your theme: </label>
+          <select name="theme" id="theme">
+            <option value="light" selected>Light Theme</option>
+            <option value="dark">Dark Theme</option>
+          </select>
+        </div>
+      </header>
+      <main>
+        <form>
+          <fieldset>
+            <label for="number">Enter a Number:</label>
+            <input
+              id="number"
+              name="number"
+              type="number"
+              placeholder="(e.g. 634)"
+            />
+            <button id="convert-btn" type="button">Convert</button>
+          </fieldset>
+          <span id="output" name="result" for="number" class="hidden"></span>
+        </form>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
